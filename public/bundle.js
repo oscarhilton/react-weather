@@ -26693,9 +26693,48 @@
 	        "div",
 	        null,
 	        React.createElement(
-	            "h3",
+	            "h1",
+	            { className: "text-center" },
+	            "About"
+	        ),
+	        React.createElement(
+	            "p",
 	            null,
-	            "About Component new"
+	            "Hello! This is a React Weather App that I put together following along with a course."
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "If you are having problems searching, make sure to use the HTTP:// not HTTPS:// URL as there are issues with Cross-Origins. Looking for a solution."
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "Here are some of the tools I used:"
+	        ),
+	        React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "https://facebook.github.io/react" },
+	                    "React"
+	                ),
+	                " - This was the JS framework used."
+	            ),
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "http://openweathermap.org" },
+	                    "Open Weather Map"
+	                ),
+	                " - I used the Open Weather Map API to retreive my weather information!"
+	            )
 	        )
 	    );
 	};
