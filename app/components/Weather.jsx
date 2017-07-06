@@ -23,7 +23,7 @@ var Weather = React.createClass({
         });
 
     },
-    render: function () {
+    render: function() {
         
         var {temp, location} = this.state;
         
