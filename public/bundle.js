@@ -25087,8 +25087,8 @@
 	            null,
 	            React.createElement(
 	                "h1",
-	                null,
-	                "Get Weather"
+	                { className: "text-center" },
+	                "Weather Lookup"
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            React.createElement(WeatherMessage, { location: location, temp: temp })
@@ -25128,7 +25128,7 @@
 	            React.createElement("input", { type: "text", ref: "location" }),
 	            React.createElement(
 	                "button",
-	                null,
+	                { className: "button expanded hollow" },
 	                "Get Weather"
 	            )
 	        );
@@ -25151,11 +25151,12 @@
 
 	  return React.createElement(
 	    "h3",
-	    null,
+	    { className: "text-center" },
 	    "It is currently ",
 	    temp,
-	    " in ",
-	    location
+	    "\u2103 in ",
+	    location,
+	    "."
 	  );
 	};
 
