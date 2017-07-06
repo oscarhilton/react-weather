@@ -24932,34 +24932,109 @@
 	var _require = __webpack_require__(166),
 	    Link = _require.Link;
 
-	var Nav = function Nav() {
-	     return React.createElement(
-	          "div",
-	          null,
-	          React.createElement(
-	               "h2",
-	               null,
-	               "Nav Component"
-	          ),
-	          React.createElement(
-	               Link,
-	               { to: "/" },
-	               "Get Weather"
-	          ),
-	          React.createElement(
-	               Link,
-	               { to: "about" },
-	               "About"
-	          ),
-	          React.createElement(
-	               Link,
-	               { to: "examples" },
-	               "Examples"
-	          )
-	     );
-	};
+	var Nav = React.createClass({
+	    displayName: "Nav",
+
+	    onSearch: function onSearch(e) {
+	        e.preventDefault();
+	        alert('not yet');
+	    },
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            { className: "top-bar" },
+	            React.createElement(
+	                "div",
+	                { className: "top-bar-left" },
+	                React.createElement(
+	                    "ul",
+	                    { className: "menu" },
+	                    React.createElement(
+	                        "li",
+	                        { className: "menu-text" },
+	                        "React Weather App"
+	                    ),
+	                    React.createElement(
+	                        "li",
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: "/", activeClassName: "active", activeStyle: { fontWeight: 'bold' } },
+	                            "Get Weather"
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "li",
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: "about", activeClassName: "active", activeStyle: { fontWeight: 'bold' } },
+	                            "About"
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "li",
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: "examples", activeClassName: "active", activeStyle: { fontWeight: 'bold' } },
+	                            "Examples"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "top-bar-right" },
+	                React.createElement(
+	                    "form",
+	                    { onSubmit: this.onSearch },
+	                    React.createElement(
+	                        "ul",
+	                        { className: "menu" },
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            React.createElement("input", { type: "search", placeholder: "Search weather" })
+	                        ),
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            React.createElement("input", { type: "submit", className: "button", value: "Get weather" })
+	                        )
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
 
 	module.exports = Nav;
+
+	var old = React.createElement(
+	    "div",
+	    null,
+	    React.createElement(
+	        "h2",
+	        null,
+	        "Nav Component"
+	    ),
+	    React.createElement(
+	        Link,
+	        { to: "/" },
+	        "Get Weather"
+	    ),
+	    React.createElement(
+	        Link,
+	        { to: "about" },
+	        "About"
+	    ),
+	    React.createElement(
+	        Link,
+	        { to: "examples" },
+	        "Examples"
+	    )
+	);
 
 /***/ },
 /* 225 */
